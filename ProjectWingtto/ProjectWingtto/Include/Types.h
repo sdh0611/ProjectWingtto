@@ -54,6 +54,6 @@ namespace Types {
 
 	enum ObjectState{ OS_IDLE, OS_MOVE, OS_ACCEL, OS_JUMP, OS_STOP, OS_ATTACK, OS_DAMAGED };
 
-	enum ColliderType{ CT_RECT, CT_CIRCLE, CT_PIXEL };
+	enum ColliderType{ CT_BOX, CT_CIRCLE, CT_PIXEL };
 
 }

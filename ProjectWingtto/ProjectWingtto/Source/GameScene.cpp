@@ -1,17 +1,19 @@
 #include "../pch.h"
 #include "../Include/GameScene.h"
+#include "../Include/Object.h"
 #include "../Include/CPlayer.h"
+#include "../Include/CEnemy.h"
 #include "../Include/Layer.h"
 #include "../Include/ComponentBase.h"
 #include "../Include/Collider.h"
 #include "../Include/ColliderBox.h"
-
+#include "../Include/CollisionDetector.h"
 
 
 
 
 GameScene::GameScene()
-	:Scene(), m_pPlayer(nullptr)
+	:Scene(), m_pPlayer(nullptr), m_pCollision(nullptr)
 {
 
 
@@ -42,6 +44,7 @@ GameScene::~GameScene()
 
 bool GameScene::Init() {
 
+
 	//플레이어 객체 초기화
 	//SAFE_DELETE(m_pPlayer)
 
@@ -49,6 +52,15 @@ bool GameScene::Init() {
 	if (!m_pPlayer->Init())
 		return false;
 
+	if (!m_pCollision->Init())
+		return false;
+
+	CreateLayer("Enemy", 0);
+	FindLayer("Enemy")->AddObject(new CEnemy);
+	FindLayer("Enemy")->AddObject(new CEnemy(Types::POINT(500, 250)));
+
+
+	Object* test = new CPlayer;
 	//초기 Layer들 초기화하는 부분.
 	for (m_lIt = m_lLayers.begin(); m_lIt != m_lLayers.end(); ++m_lIt) {
 		if (!(*m_lIt)->Init())
@@ -60,11 +72,11 @@ bool GameScene::Init() {
 
 
 void GameScene::Update(float deltaTime) {
-
-	Scene::Update(deltaTime);
+	
 	m_pPlayer->Update(deltaTime);
-	DetectCollsion();
-
+	Scene::Update(deltaTime);			//Layer Update()
+	//DetectCollsion();
+	//m_pCollision->Update();
 
 }
 
@@ -99,7 +111,7 @@ bool GameScene::AddObject(const std::string& layerTag, Types::ObjectType type)
 bool GameScene::DetectCollsion()
 {
 	ComponentBase* pComponent;
-	ColliderBox* box = static_cast<ColliderBox*>(pComponent);
+	//ColliderBox* box = static_cast<ColliderBox*>(pComponent);
 
 
 

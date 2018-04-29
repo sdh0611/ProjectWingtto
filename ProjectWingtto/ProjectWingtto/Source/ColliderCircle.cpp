@@ -2,8 +2,9 @@
 #include "../Include/ColliderCircle.h"
 
 ColliderCircle::ColliderCircle()
-	:Collider()
+	:Collider(Types::CT_CIRCLE)
 {
+
 }
 
 bool ColliderCircle::Init(Object * object)

@@ -1,6 +1,7 @@
 #pragma once
 
 
+class Collider;
 class ColliderBox;
 class ColliderCircle;
 
@@ -14,10 +15,10 @@ public:
 
 public:
 	bool Init();
-	void Update();
-	bool CheckCollisionRect(ColliderBox* pBox, ColliderBox* pOtherBox);
+	void Update(Collider* collider, Collider* other);
+	bool CheckCollisionBox(ColliderBox* pBox, ColliderBox* pOtherBox);
 	bool CheckCollisionCircle(ColliderCircle* pCircle, ColliderCircle* pOtherCircle);
-	bool CheckCollisionRectCircle(ColliderBox* pBox, ColliderCircle* pCircle`);
+	bool CheckCollisionBoxCircle(ColliderBox* pBox, ColliderCircle* pCircle);
 
 
 

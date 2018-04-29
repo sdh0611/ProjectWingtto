@@ -23,6 +23,5 @@ public:
 
 private:
 	Types::RECTANGLE			m_rBox;
-	Object*						m_pOwner;
 
 };

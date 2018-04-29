@@ -8,7 +8,7 @@ class ColliderCircle :public Collider {
 
 public:
 	ColliderCircle();
-	virtual ~ColliderCircle();
+	virtual ~ColliderCircle() { };
 
 
 public:

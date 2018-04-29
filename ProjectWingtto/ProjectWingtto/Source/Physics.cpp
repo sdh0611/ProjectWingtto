@@ -13,8 +13,10 @@ Physics::~Physics()
 {
 }
 
-bool Physics::Init()
+bool Physics::Init(Object* pOwner)
 {
+	m_pOwner = static_cast<MoveObject*>(pOwner);
+
 	m_bPhysicsOn = true;
 	m_fGravityAccel = 20.f;
 	m_fSpeed = 500.f;
@@ -25,43 +27,43 @@ bool Physics::Init()
 	return true;
 }
 
-void Physics::Update(MoveObject& object, const float& deltaTime)
+void Physics::Update(const float& deltaTime)
 {
-	Move(object, deltaTime);
+	Move(deltaTime);
 	
-	if(object.GetObjectState() == Types::OS_JUMP)
-		Gravity(object, deltaTime);
+	if(m_pOwner->GetObjectState() == Types::OS_JUMP)
+		Gravity(deltaTime);
 
 
 
 }
 
-void Physics::Move(MoveObject& object, const float& deltaTime) {
+void Physics::Move(const float& deltaTime) {
 
 
-	switch (object.GetDirection()) {
+	switch (m_pOwner->GetDirection()) {
 	case Types::DIR_UP:
-		object.SetPosition(object.GetPosition().x, object.GetPosition().y - m_fSpeed * deltaTime);
+		m_pOwner->SetPosition(m_pOwner->GetPosition().x, m_pOwner->GetPosition().y - m_fSpeed * deltaTime);
 		break;
 	case Types::DIR_DOWN:
-		object.SetPosition(object.GetPosition().x, object.GetPosition().y + m_fSpeed * deltaTime);
+		m_pOwner->SetPosition(m_pOwner->GetPosition().x, m_pOwner->GetPosition().y + m_fSpeed * deltaTime);
 		break;
 	case Types::DIR_RIGHT:
-		object.SetPosition(object.GetPosition().x + m_fSpeed * deltaTime, object.GetPosition().y);
+		m_pOwner->SetPosition(m_pOwner->GetPosition().x + m_fSpeed * deltaTime, m_pOwner->GetPosition().y);
 		break;
 	case Types::DIR_LEFT:
-		object.SetPosition(object.GetPosition().x - m_fSpeed * deltaTime, object.GetPosition().y);
+		m_pOwner->SetPosition(m_pOwner->GetPosition().x - m_fSpeed * deltaTime, m_pOwner->GetPosition().y);
 		break;
 	}
 
 
 }
 
-void Physics::Gravity(MoveObject & object, const float & deltaTime)
+void Physics::Gravity(const float & deltaTime)
 {
 
-	if (object.GetPosition().y < 300) {
-		object.SetPosition(object.GetPosition().x, object.GetPosition().y + m_fGravityAccel*deltaTime);
+	if (m_pOwner->GetPosition().y < 300) {
+		m_pOwner->SetPosition(m_pOwner->GetPosition().x, m_pOwner->GetPosition().y + m_fGravityAccel*deltaTime);
 		if(m_fGravityAccel < 300.f)
 			m_fGravityAccel += 5.f;
 	}

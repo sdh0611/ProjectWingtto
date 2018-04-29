@@ -1,7 +1,7 @@
 #pragma once
 
 #include "../pch.h"
-#include "MoveObject.h"
+#include "./MoveObject.h"
 
 
 class CPlayer : public MoveObject
@@ -37,8 +37,8 @@ private:
 
 //ÄÄÆ÷³ÍÆ®µé
 private:
-	std::unique_ptr<class InputComponent>	m_pInput;
-	std::unique_ptr<class Physics>				m_pPhysics;
+	class InputComponent* 	m_pInput;
+	class Physics*				m_pPhysics;
 
 
 };

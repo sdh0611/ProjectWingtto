@@ -58,11 +58,11 @@ bool CPlayer::Init() {
 	//	return false;
 
 
-	m_pInput = std::unique_ptr<InputComponent>(new InputComponent);
-	m_pInput->Init();
+	m_pInput = new InputComponent;
+	m_pInput->Init(this);
 
-	m_pPhysics = std::unique_ptr<Physics>(new Physics);
-	m_pPhysics->Init();
+	m_pPhysics = new Physics;
+	m_pPhysics->Init(this);
 
 
 	HWND hWnd = FindWindow(TEXT("MyWindow"), TEXT("MyWindowCaption"));
@@ -75,8 +75,8 @@ bool CPlayer::Init() {
 
 void CPlayer::Update(float deltaTime) {
 
-	m_pInput->Update(*this);
-	m_pPhysics->Update(*this, deltaTime);
+	m_pInput->Update(deltaTime);
+	m_pPhysics->Update(deltaTime);
 	//Move(deltaTime);
 	
 

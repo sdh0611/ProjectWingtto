@@ -30,7 +30,7 @@ private:
 	//std::list<Object*>::iterator		m_lIt;
 	//shared_ptr로 만들지는 나중에 생각(18.04.26)
 	CPlayer*							m_pPlayer;
-
+	class CollisionDetector*			m_pCollision;
 
 
 };

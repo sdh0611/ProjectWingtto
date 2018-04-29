@@ -3,10 +3,12 @@
 #pragma once
 
 #include "../pch.h"
+#include "./ComponentBase.h"
+
 
 class MoveObject;
 
-class Physics
+class Physics:public ComponentBase
 {
 public:
 	Physics();
@@ -14,11 +16,11 @@ public:
 
 
 public:
-	bool Init();
-	void Update(MoveObject& object, const float& deltaTime);
-	void Move(MoveObject& object, const float& deltaTime);
+	bool Init(class Object* pOwner) override;
+	void Update(const float& deltaTime) override;
+	void Move(const float& deltaTime);
 	//void Move(const Types::Direction& dir, const float& speed, const float& deltaTime);
-	void Gravity(MoveObject& object, const float& deltaTime);
+	void Gravity(const float& deltaTime);
 
 
 public:

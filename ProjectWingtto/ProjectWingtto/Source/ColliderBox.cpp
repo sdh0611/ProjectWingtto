@@ -4,6 +4,7 @@
 
 
 ColliderBox::ColliderBox()
+	:Collider(Types::CT_BOX)
 {
 
 
