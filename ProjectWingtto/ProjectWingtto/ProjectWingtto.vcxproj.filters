@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="소스 파일">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="헤더 파일">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="리소스 파일">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="소스 파일\Window">
+      <UniqueIdentifier>{67c64ea0-5ab8-48a7-a2aa-b6697f518d42}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\Window">
+      <UniqueIdentifier>{e98e50db-6281-47d9-bd92-37e1ba2d50e2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Component">
+      <UniqueIdentifier>{c6e93ab2-ef57-4abd-8146-36afb859035d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\Component">
+      <UniqueIdentifier>{b63e81c3-3090-47f1-9d6c-833cb68661b5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Scene">
+      <UniqueIdentifier>{b3647a57-f1a5-4b59-a253-6d276f45844f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\Scene">
+      <UniqueIdentifier>{b7fbea5c-ecbd-497d-8ff2-e7876b84fad2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\Common">
+      <UniqueIdentifier>{e17c5f70-d642-4bce-a4e4-ca64073bb611}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Common">
+      <UniqueIdentifier>{55df3c2e-aacc-4209-9e6a-01ffe8829466}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\Object">
+      <UniqueIdentifier>{d4c24a74-b135-4040-a45c-414f9ae577f0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Object">
+      <UniqueIdentifier>{fc9e5840-619f-4121-8618-6651b5165dae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\Component\Collider">
+      <UniqueIdentifier>{24e4ece3-ed39-41a3-935a-6156672b2909}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Component\Collider">
+      <UniqueIdentifier>{9f1be9be-62f9-42a2-9782-efdfe4808dc4}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Source\MyWindow.cpp">
+      <Filter>소스 파일\Window</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Sprite.cpp">
+      <Filter>소스 파일\Component</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\SceneManager.cpp">
+      <Filter>소스 파일\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Scene.cpp">
+      <Filter>소스 파일\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\GameScene.cpp">
+      <Filter>소스 파일\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="pch.cpp">
+      <Filter>소스 파일\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Object.cpp">
+      <Filter>소스 파일\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\CPlayer.cpp">
+      <Filter>소스 파일\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Layer.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Timer.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Physics.cpp">
+      <Filter>소스 파일\Component</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\InputComponent.cpp">
+      <Filter>소스 파일\Component</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\ColliderBox.cpp">
+      <Filter>소스 파일\Component\Collider</Filter>
+    </ClCompile>
+    <ClCompile Include="Include\MoveObject.cpp">
+      <Filter>소스 파일\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\ComponentBase.cpp">
+      <Filter>소스 파일\Component</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\CollisionDetector.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\ColliderCircle.cpp">
+      <Filter>소스 파일\Component\Collider</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\CEnemy.cpp">
+      <Filter>소스 파일\Object</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Include\MyWindow.h">
+      <Filter>헤더 파일\Window</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Sprite.h">
+      <Filter>헤더 파일\Component</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\SceneManager.h">
+      <Filter>헤더 파일\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Scene.h">
+      <Filter>헤더 파일\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GameScene.h">
+      <Filter>헤더 파일\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Singleton.hpp">
+      <Filter>헤더 파일\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="pch.h">
+      <Filter>헤더 파일\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Types.h">
+      <Filter>헤더 파일\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Object.h">
+      <Filter>헤더 파일\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\CPlayer.h">
+      <Filter>헤더 파일\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Layer.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\TImer.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Physics.h">
+      <Filter>헤더 파일\Component</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\InputComponent.h">
+      <Filter>헤더 파일\Component</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\ColliderBox.h">
+      <Filter>헤더 파일\Component\Collider</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Collider.h">
+      <Filter>헤더 파일\Component\Collider</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\MoveObject.h">
+      <Filter>헤더 파일\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\ComponentBase.h">
+      <Filter>헤더 파일\Component</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\CollisionDetector.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\ColliderCircle.h">
+      <Filter>헤더 파일\Component\Collider</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\CEnemy.h">
+      <Filter>헤더 파일\Object</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

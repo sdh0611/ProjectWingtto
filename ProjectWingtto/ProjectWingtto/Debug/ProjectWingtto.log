@@ -1,0 +1,3 @@
+﻿  GameScene.cpp
+d:\soucrcetree repository\projectwingtto\projectwingtto\source\gamescene.cpp(118): warning C4700: 초기화되지 않은 'pComponent' 지역 변수를 사용했습니다.
+  ProjectWingtto.vcxproj -> D:\SoucrceTree Repository\ProjectWingtto\Debug\ProjectWingtto.exe
